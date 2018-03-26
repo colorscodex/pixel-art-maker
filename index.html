@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<!-- The viewport portmeta tag will give the browser instructions on how to control the page's dimensions and scaling.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Pixel Art Maker!</title>
+		<link href="myLogo.ico" rel="icon" type="image/x-icon">
+		<link rel="stylesheet" href="styles.css">
+		
+		<!-- Font family -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		
+		<!-- For specifying a default URL and a default target for all links on the page -->
+		<base target="_blank">
+	</head>
+	<body>
+		<nav id="drawer" class="drawer">
+			<div><span id="closeDrawer" onclick="closeDrawer()">✕</span></div>
+			
+			<h3 class="textDrawer">Art Gallery</h3>
+			
+			<a href="pixel-colorscodex.jpg"><img width="500" src="pixel-colorscodex.jpg" alt="image" class="imageDrawer"></a>
+			<p>ColorsCodex</p>
+			
+			<a href="pixel-spectrum.jpg"><img width="500" src="pixel-spectrum.jpg" alt="image" class="imageDrawer"></a>
+			<p>Spectrum</p>
+			
+			<a href="pixel-propeller.jpg"><img width="500" src="pixel-propeller.jpg" alt="image" class="imageDrawer"></a>
+			<p>Propeller</p>
+			
+			<a  href="pixel-udacity.jpg"><img width="500" src="pixel-udacity.jpg" alt="image" class="imageDrawer"></a>
+			<p><a href="https://eu.udacity.com/">Udacity</a></p>
+		</nav>
+		
+		<nav class="open">
+			<span id="openDrawer" onclick="openDrawer()">☰ Art Gallery</span>
+		</nav>
+		
+		<h1>Lab: Pixel Art Maker</h1>
+		
+		<h2>Choose Grid Size</h2>
+		
+		<form id="sizePicker">
+			Grid Height:
+			<input type="number" id="input_height" name="height" min="1" max="40" value="1">
+			
+			Grid Width:
+			<input type="number" id="input_width" name="width" min="1" max="40" value="1">
+			
+			<input type="submit" value="submit">
+		</form>
+		
+		<h2>Pick A Color</h2>
+
+        	<input type="color" id="myColorPicker" value="#ff8000">
+
+        	<h2>Design Canvas</h2>
+	
+        	<table id="pixel-canvas"></table>
+
+        	<br>
+	
+        	<!-- Section to write colorcode or whatever you want! -->
+	
+        	<button id="screenShot">Keyboard shortcut for screenshot: ⇧ +  ⌘ + 4 </button>
+      
+        	<div class="text-area">
+	      
+            		<!-- A button for knowing the color code with we paint the grid -->             
+            		<button id="myButton-action">To know the color code, click!</button>
+               
+            		<p>colorCode: <span id="colorCode"></span> </p>
+            		<input type="reset" value="clear" id="deleteCode">
+	        
+            		<!-- An area to be able to take annotations -->  
+            		<form>
+	        		<textarea class="textArea" name="textarea" rows="3" cols="25" spellcheck="true" placeholder="Write your color code or whatever you want!"></textarea>
+                		<br>
+                		<input type="reset" value="clear" id="deleteText">
+            		</form>
+        	</div> 
+
+        	<!-- In this third section, I create a portfolio with images of some. -->
+        	<!-- pixel canvas with Thumbnail effect; "img" element wraps in an "a" element around it. -->
+        	<!-- If you make click on image, then it is opened a new page to can see it better.-->
+        	<!-- And we can see the logo effect of the created image, too. -->
+
+        	<h1>Art Gallery</h1>
+
+        	<div id="art-gallery">
+			
+			<div class="col">
+				<a href="pixel-colorscodex.jpg"><img src="pixel-colorscodex.jpg" alt="ColorsCodex pixel canvas" class="responsive"></a>
+				<p class="nameCanvas"><a href="https://colorscodex.blogspot.pt/">ColorsCodex</a></p>
+			</div>
+			
+			<div class="col">
+				<a href="pixel-spectrum.jpg"><img width="500" src="pixel-spectrum.jpg" alt="Spectrum pixel canvas" class="responsive"></a>
+				<p class="nameCanvas">Spectrun</p>
+			</div>
+			
+			<div class="col">
+				<a href="pixel-propeller.jpg"><img width="500" src="pixel-propeller.jpg" alt="Propeller pixel canvas" class="responsive"></a>
+				<p class="nameCanvas">Propeller</p>
+			</div>
+			
+			<div class="col">
+				<a href="pixel-udacity.jpg"><img width="500" src="pixel-udacity.jpg" alt="Udacity pixel canvas" class="responsive"></a>
+				<p class="nameCanvas"><a href="https://eu.udacity.com/">Udacity</a></p>
+			</div>
+		</div>
+		
+		<!-- Footer with the signature. -->
+		<footer>
+			<img  class="logo" src="pixel-colorscodex.jpg" alt="COLORSCODEX logo">
+			<p>By <a href="https://colorscodex.blogspot.pt/">ColorsCodex</a>: other point of view about colors.</p>
+		</footer>
+		
+		<script src="design.js"></script>
+	</body>
+</html>
