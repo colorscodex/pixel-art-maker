@@ -141,16 +141,32 @@ document.getElementById("myH4").innerHTML = makeLine(12);
                 I created a drawer for small devices to seeing the Art Gallery.
                 And when it is called it has a width that fills all the frame.
                 For closing I remove the width. 
+*//*
+    For creating an event listener:
+    ===============================
+
+    1- <event-target>: It is the element with id="openDrawer/closeDrawer 
+    Store inside a variable called x/y using the method document.getElementById(). 
+
+    2- Define the function open/close.
+
+    3- <event-target>.addEventListener(<event-to-listen-for>, function-to-run-when-an-event-happens>);
 */
    
-function openDrawer() {
-       
+const x = document.getElementById("openDrawer");  
+function open () {
     document.getElementById("drawer").style.width = "100%";
 }
 
-function closeDrawer() {
-        
+x.addEventListener ("click", open);
+
+const y = document.getElementById("closeDrawer");
+function close () {
+    
     document.getElementById("drawer").style.width = "0";       
 }
+
+y.addEventListener ("click", close);
+
 
 
