@@ -2,7 +2,7 @@
  *  For all browsers.
  */
 
-*{
+* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -10,9 +10,9 @@
 }
 
 /*
- *   For preventing adjustments of font size after 
- *   orientation changes in IE and iOS.
- *   ==============================================
+ *  For preventing adjustments of font size after 
+ *  orientation changes in IE and iOS.
+ *  ==============================================
  */
 
 html {
@@ -27,16 +27,17 @@ html {
  *  ===============================================
  */
 
-
 #art-gallery,
-footer {
+footer,
+.go-colorscodex,
+.back-portfolio {
     -webkit-flex: flex;
     display: flex;
 }
 
 /*
- *    layout responsive
- *    =================
+ *  layout responsive
+ *  =================
  */
 
 html, 
@@ -48,9 +49,9 @@ body {
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: #717600;
+    color: #808000;
     width: 100%;
-    background: #fafafa;
+    background: #f8f8ff;
     width: 100%;
     z-index: -1;
 }
@@ -77,7 +78,7 @@ td {
 table {
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #fafafa;
+    background-color: #f8f8ff;
 }
 
 tr {
@@ -91,15 +92,14 @@ td {
 input[type=reset],
 input[type=number] {
     width: 6em;
+    color: #808000;
 }
 
 /* 
- *   Colors: #717600 //green olive color;   
- *           #f5f5f5  #fafafa //white;   
- *           #b3b3b3 // gray; 
- *           #0a4759 //blue;
- *           #800080 // plum color;
- *           #f5f5dc // beige   
+ *  Colors: #808000 //olive color;   
+ *          #f8f8ff // ghost-white;   
+ *          #696969 // dim-gray;
+ *          #ff7f50 // coral; 
  */
 
 .writeArea {
@@ -107,12 +107,12 @@ input[type=number] {
 }
 
 #screenShot {
-    background-color: #8b8b7a;
+    background-color: #696969;
     cursor: none;  
 }
 
 #myButton-action {
-    background-color: #717600;
+    background-color: #808000;
     cursor: pointer;
 }
 
@@ -123,32 +123,36 @@ input[type=number] {
     padding: 5px;
     width: 230px;
     height: 50px;
-    color: #fafafa;
+    color: #f8f8ff;
     border: 4px;
     border-radius: 4px;
     margin: 20px auto;   
 }
 
 #myButton-action:hover {
-    background-color: #717600;
-    color: #fafafa;
+    background-color: #808000;
+    color: #f8f8ff;
     box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);    
 }
 
 #colorCode {
-    color: #800080;     
+    color: #808000;     
 }
 
 .text-area {
     margin-bottom: 22px;     
 }
 
+/* For introducing some pixel images obtained with the grid.*/
+
 #art-gallery {
     max-width: 100%;
-    border-top: 2px solid #717600;     
+    border-top: 2px solid #808000;     
     padding-top: 20px;  
     margin-bottom: 80px;     
 }
+
+/* The divs with class = "col " contain the pixel images. */
 
 .col {
     width: 25%;
@@ -170,8 +174,12 @@ input[type=number] {
 }
 
 img:hover { 
-    background-color: #0a4759;
+    background-color: #696969;
 }
+
+/*  The paragraph with the title of pixel images, 
+    some of them have an action.
+    =========================== */
 
 .nameCanvas {
     font-size: 15px;
@@ -179,17 +187,17 @@ img:hover {
 }
 
 a {
-    color: #717600;
+    color: #808000;
     outline:none;
 }
 
 a:hover{
-    color: #fafafa;
+    color: #f8f8ff;
     text-decoration: none;
 }
     
 /*
- *  footer: I add "-webkit-justify-content: center" 
+ *  footer: I add "-webkit-justify-content: space-between" 
  *  as an alternative for the propertie justify-content
  *  for Safari 6.1 (and newer).
  *         
@@ -199,32 +207,33 @@ footer {
     font: 400 15px "Open Sans", sans-serif;
     position: fixed;
     width: 100%;      
-    color: #fafafa; 
+    color: #f8f8ff; 
     left: 0;
     bottom: 0;
-    background-color: #717600; /*url("../img/pixel.jpg");*/
-    padding: 10px 5px;
-    text-align: center;   
+    background-color: #808000; 
+    padding: 5x 0;  
     vertical-align: middle;
-    justify-content: center;
-    -webkit-justify-content: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.go-colorscodex,
+.back-portfolio {
+    margin: 0 20px;
 }
 
 footer p {
-    color: #fafafa;
-    padding-top: 10px;
+    color: #f8f8ff;
+    padding-top: 12px;
     margin: 0;
 }
 
 footer a {
-    color: #fafafa;
+    color: #f8f8ff;
 }
 
-/*
- *  Logo got with a pixel canvas.
- *  =============================
- * 
- */
+/*  Logo got with a pixel canvas.
+    ============================= */
 
 .logo {
     display: block;
@@ -233,39 +242,61 @@ footer a {
     padding: 0;
     vertical-align: middle;
     margin: 5px;
-    }
+}
 
-/*
- *  @Description: drawer styles.
- *  ============================
- *
- */
+/*  Squares of colors.
+    ================= */
+
+.dim-gray,
+.ghost-white,
+.coral {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 10px 5px;
+}
+
+.dim-gray {
+    background-color: #696969;
+    margin-left: 20px;
+}
+
+.ghost-white {
+    background-color: #f8f8ff;
+}
+
+.coral {
+    background-color: #ff7f50;
+}
+
+/*  @Description: drawer styles.
+    ============================ */
       
 .drawer {
     top: 0;
     left: 0; 
     width: 0;     
     height: 100%;
-    color: #fafafa;
+    color: #f8f8ff;
     z-index: 2;
     display: block;
     text-align: center;
     transition:  0.5s;
     overflow-x: hidden; 
     position: fixed;                                     
-    background-color: #fffff0;
+    background-color: #f8f8ff;
     padding-top: 40px;
 }
       
 nav a {
     outline: none;              
-    color: #717600;
+    color: #808000;
     display: block;
 }
 
 nav p {        
     font-size: 0.9em;
-    color: #717600;
+    color: #808000;
 }
 
 .imageDrawer {
@@ -280,7 +311,7 @@ nav p {
     right: 25px;
     position: absolute;      
     font: 400 30px "Monoton", cursive;
-    color: #717600;
+    color: #808000;
     cursor: pointer;     
 }
 
@@ -293,7 +324,7 @@ nav p {
 .textDrawer { 
     margin: 0 0 30px 0;
     font: 400 50px "Monoton", cursive;
-    color: #717600;
+    color: #808000;
 }
 
 .open {
@@ -308,6 +339,7 @@ nav p {
  */
 
 @media screen and (min-width: 600px){
+    
     #closeDrawer,
     #drawer,
     .open {
@@ -323,7 +355,8 @@ nav p {
  *
  */
 
-@media screen and (max-width: 500px){    
+@media screen and (max-width: 500px){   
+    
     h1 {
         font: 400 40px 'Monoton', sans-serif;
         padding: 0 5px;
@@ -335,7 +368,8 @@ nav p {
     }
 }
 
-@media screen and (max-width: 600px){       
+@media screen and (max-width: 600px){  
+    
     #art-gallery,
     h1:last-of-type,
     hr {
@@ -353,12 +387,28 @@ nav p {
     }
 
     #sizePicker,
-       footer p {
-       font-size: 0.9em; 
+    footer p {
+        font-size: 0.9em; 
+    }
+    
+    footer {
+        display: block;
+    }
+    
+    .go-colorscodex {
+        justify-content: center;
+        -webkit-justify-content: center;
+        margin: 0 0 0 5px;
+    }
+
+    .back-portfolio {
+        justify-content: center;
+        -webkit-justify-content: center;
     }
 }
 
 @media screen and (min-width: 501px) and (max-width: 700px){
+    
     h1 {
         font-size: 62px;
     }
@@ -368,7 +418,8 @@ nav p {
    }
 }
 
-@media screen and (min-width: 601px) and (max-width: 899px){     
+@media screen and (min-width: 601px) and (max-width: 899px){ 
+    
     .responsive {
         box-shadow: none;
     }
