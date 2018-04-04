@@ -74,7 +74,7 @@ $("#pixel-canvas").on("click", "td", function(){
 $("h1").last().before(document.createElement("hr"));
 $("hr").first().after("<hr>");
 $("hr").last().after("<hr>");
-$("hr").css("border", "1px solid  #717600");
+$("hr").css("border", "1px solid  #808000");
      
  
 /*
