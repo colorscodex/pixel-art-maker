@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		
+		<title>Pixel Art Maker!</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
 		<!-- The viewport portmeta tag will give the browser instructions on how to control the page's dimensions and scaling.-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Pixel Art Maker!</title>
 		<link href="myLogo.ico" rel="icon" type="image/x-icon">
 		<link rel="stylesheet" href="styles.css">
 		
@@ -58,44 +59,41 @@
 		</form>
 		
 		<h2>Pick A Color</h2>
-
-        	<input type="color" id="myColorPicker" value="#ff8000">
-
-        	<h2>Design Canvas</h2>
-	
-        	<table id="pixel-canvas"></table>
-
-        	<br>
-	
-        	<!-- Section to write colorcode or whatever you want! -->
-	
-        	<button id="screenShot">Keyboard shortcut for screenshot: ⇧ +  ⌘ + 4 </button>
-      
-        	<div class="text-area">
-	      
-            		<!-- A button for knowing the color code with we paint the grid -->             
-            		<button id="myButton-action">To know the color code, click!</button>
-               
-            		<p>colorCode: <span id="colorCode"></span> </p>
-            		<input type="reset" value="clear" id="deleteCode">
-	        
-            		<!-- An area to be able to take annotations -->  
-            		<form>
-	        		<textarea class="textArea" name="textarea" rows="3" cols="25" spellcheck="true" placeholder="Write your color code or whatever you want!"></textarea>
-                		<br>
-                		<input type="reset" value="clear" id="deleteText">
-            		</form>
-        	</div> 
-
-        	<!-- In this third section, I create a portfolio with images of some. -->
-        	<!-- pixel canvas with Thumbnail effect; "img" element wraps in an "a" element around it. -->
-        	<!-- If you make click on image, then it is opened a new page to can see it better.-->
-        	<!-- And we can see the logo effect of the created image, too. -->
-
-        	<h1>Art Gallery</h1>
-
-        	<div id="art-gallery">
+		
+		<input type="color" id="myColorPicker" value="#ff8000">
+		
+		<h2>Design Canvas</h2>
+		
+		<table id="pixel-canvas"></table>
+		
+		<br>
+		
+		<!-- Section to write colorcode or whatever you want! -->
+		
+		<button id="screenShot">Keyboard shortcut for screenshot: ⇧ +  ⌘ + 4 </button>
+		
+		<div class="text-area">
+			<!-- A button for knowing the color code with we paint the grid -->
+			<button id="myButton-action">To know the color code, click!</button>
 			
+			<p>colorCode: <span id="colorCode"></span> </p>
+			<input type="reset" value="clear" id="deleteCode">
+			
+			<!-- An area to be able to take annotations -->
+			<form>
+				<textarea class="textArea" name="textarea" rows="3" cols="25" spellcheck="true" placeholder="Write your color code or whatever you want!"></textarea>
+				<br>
+				<input type="reset" value="clear" id="deleteText">
+			</form>
+		</div> 
+		
+		<!-- In this third section, I create a portfolio with images of some. -->
+		<!-- pixel canvas with Thumbnail effect; "img" element wraps in an "a" element around it. -->
+		<!-- If you make click on image, then it is opened a new page to can see it better.-->
+		<!-- And we can see the logo effect of the created image, too. -->
+		
+		<h1>Art Gallery</h1>
+		<div id="art-gallery">
 			<div class="col">
 				<a href="pixel-colorscodex.jpg"><img src="pixel-colorscodex.jpg" alt="ColorsCodex pixel canvas" class="responsive"></a>
 				<p class="nameCanvas"><a href="https://colorscodex.blogspot.pt/">ColorsCodex</a></p>
@@ -120,19 +118,18 @@
 		<!-- Footer with the signature. -->
 		<footer>
 			<div class="go-colorscodex">
-				<img  class="logo" src="pixel-colorscodex.jpg" alt="COLORSCODEX logo">
+				<img  class="logo" src="pixel-colorscodex.jpg" alt="COLORSCODEX logo" title="COLORSCODEX,blog">
 				<p>By <a href="https://colorscodex.blogspot.pt/">ColorsCodex</a>: other point of view about colors.</p>
 			</div>
 			
 			<!-- With the colors used in the page I created a signature. -->
 			<div class="back-portfolio">
-                		<p><a target="_self" href="https://colorscodex.github.io/Portfolio-Site/portfolio-english.html">Portfolio-Site</a></p>
-                
-                		<div class="dim-gray"></div>
-                		<div class="ghost-white"></div>
-                		<div class="coral"></div>
-                
-            		</div>			
+				<p><a target="_self" href="https://colorscodex.github.io/Portfolio-Site/portfolio-english.html">Portfolio-Site</a></p>
+				
+				<span class="dim-gray" title="DimGray"></span>
+				<span class="ghost-white" title="GhostWhite"></span>
+				<span class="coral" title="Coral"></span>
+			</div>
 		</footer>
 		
 		<script src="design.js"></script>
