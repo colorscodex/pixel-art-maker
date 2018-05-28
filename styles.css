@@ -232,6 +232,10 @@ footer a {
     color: #f8f8ff;
 }
 
+footer a:hover {
+    color: #ff7f50;
+}
+
 /*  Logo got with a pixel canvas.
     ============================= */
 
