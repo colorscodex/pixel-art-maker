@@ -2,7 +2,7 @@
  *  For all browsers.
  */
 
-*{
+* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -344,6 +344,7 @@ nav p {
  */
 
 @media screen and (min-width: 600px){
+    
     #closeDrawer,
     #drawer,
     .open {
@@ -359,7 +360,8 @@ nav p {
  *
  */
 
-@media screen and (max-width: 500px){    
+@media screen and (max-width: 500px){ 
+    
     h1 {
         font: 400 40px 'Monoton', sans-serif;
         padding: 0 5px;
@@ -371,7 +373,8 @@ nav p {
     }
 }
 
-@media screen and (max-width: 600px){       
+@media screen and (max-width: 600px){   
+    
     #art-gallery,
     h1:last-of-type,
     hr {
@@ -419,7 +422,8 @@ nav p {
    }
 }
 
-@media screen and (min-width: 601px) and (max-width: 899px){     
+@media screen and (min-width: 601px) and (max-width: 899px){    
+    
     .responsive {
         box-shadow: none;
     }
