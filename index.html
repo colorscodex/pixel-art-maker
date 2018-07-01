@@ -16,8 +16,6 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		
 		<!-- For specifying a default URL and a default target for all links on the page -->
 		<base target="_blank">
 	</head>
@@ -132,6 +130,11 @@
 			</div>
 		</footer>
 		
+		<!-- If we include our script in the <head> normally, it will run as soon as it is downloaded, which will occur before the DOM has built the elements we want our script to run against. So our script wouldn´t be able to do anything. 
+		For that, we include it at the bottom of the <body>, but that would mean that the downloaded could potentially start later in the load process.-->
+		<!-- jQuery Library -->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<!-- Script -->
 		<script src="js/design.js"></script>
 	</body>
 </html>
